@@ -1,6 +1,6 @@
 """Test the io module."""
 
-from heat.io import load_config
+from diffusion.io import load_config
 
 CONFIG_FILE = "config.yaml"
 

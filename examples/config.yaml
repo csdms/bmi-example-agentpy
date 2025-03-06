@@ -1,5 +1,5 @@
-# model configuration parameters
-HeatModel:
+# Model configuration parameters
+DiffusionModel:
   n_agents: 100
   n_cols: 10
   n_rows: 10

@@ -3,5 +3,5 @@
 import agentpy as ap
 
 
-class HeatModel(ap.Model):
+class DiffusionModel(ap.Model):
     pass

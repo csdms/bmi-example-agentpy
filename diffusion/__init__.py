@@ -1,5 +1,5 @@
 """Model diffusion over a 2D domain."""
 
-from .heatmodel import HeatModel
+from .diffusion_model import DiffusionModel
 
-__all__ = ["HeatModel"]
+__all__ = ["DiffusionModel"]

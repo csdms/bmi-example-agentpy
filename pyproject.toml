@@ -37,6 +37,7 @@ classifiers = [
 ]
 requires-python = ">=3.11"
 dependencies = [
+  "agentpy",
   "bmipy",
   "joblib",
   "matplotlib",

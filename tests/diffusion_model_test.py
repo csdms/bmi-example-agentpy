@@ -8,6 +8,7 @@ PARAMETERS = {
     "steps": 20,
     "n_cols": 5,
     "n_rows": 5,
+    "initial_location": [2, 2],
     "bmi_version": "2.0",
 }
 
@@ -28,3 +29,9 @@ def test_model_has_parameters():
     assert m.p.steps == PARAMETERS["steps"]
     assert m.p.n_cols == PARAMETERS["n_cols"]
     assert m.p.n_rows == PARAMETERS["n_rows"]
+
+
+def test_model_setup():
+    m = DiffusionModel(PARAMETERS)
+    m.setup()
+    assert len(m.agents) == PARAMETERS["agents"]

@@ -4,7 +4,20 @@ import agentpy as ap
 
 
 class Particle(ap.Agent):
-    pass
+
+    direction = [
+        (0, 0),
+        (1, 0),
+        (0, 1),
+        (-1, 0),
+        (0, -1),
+    ]
+
+    def setup(self):
+        self.displacement = [0, 0]
+
+    def set_random_displacement(self):
+        self.displacement = self.model.random.choice(Particle.direction)
 
 
 class DiffusionModel(ap.Model):
@@ -15,3 +28,10 @@ class DiffusionModel(ap.Model):
 
         positions = (self.p.initial_location,) * self.p.agents
         self.grid.add_agents(self.agents, positions=positions)
+
+    def update(self):
+        self.agents.set_random_displacement()
+
+    def step(self):
+        for agent in self.agents:
+            self.grid.move_by(agent, agent.displacement)

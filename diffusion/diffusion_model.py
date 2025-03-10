@@ -29,7 +29,10 @@ class DiffusionModel(ap.Model):
         positions = (self.p.initial_location,) * self.p.agents
         self.grid.add_agents(self.agents, positions=positions)
 
+        self.histogram = None
+
     def update(self):
+        self.histogram = self.grid.apply(len, field="agents")
         self.agents.set_random_displacement()
 
     def step(self):

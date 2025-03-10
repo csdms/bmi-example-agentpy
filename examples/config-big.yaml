@@ -1,0 +1,8 @@
+# Model configuration parameters
+DiffusionModel:
+  agents: 1000
+  steps: 50
+  n_cols: 100
+  n_rows: 100
+  initial_location: [50, 50]
+  bmi_version: "2.0"

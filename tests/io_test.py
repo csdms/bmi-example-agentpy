@@ -15,4 +15,4 @@ def test_load_config(shared_datadir):
 
 def test_load_config_fails_on_unknown_file():
     with pytest.raises(FileNotFoundError):
-        params = load_config("this-file-does-not-exist.yaml")
+        _ = load_config("this-file-does-not-exist.yaml")

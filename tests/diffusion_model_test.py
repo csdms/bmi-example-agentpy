@@ -1,7 +1,9 @@
 """Test the diffusion_model module."""
 
 import math
+
 import agentpy as ap
+
 from diffusion import DiffusionModel
 
 PARAMETERS = {
@@ -37,7 +39,10 @@ def test_model_setup():
     m.setup()
     assert len(m.agents) == PARAMETERS["agents"]
     assert m.grid.shape == (PARAMETERS["n_rows"], PARAMETERS["n_cols"])
-    assert len(m.grid.grid[tuple(PARAMETERS["initial_location"])][0]) == PARAMETERS["agents"]
+    assert (
+        len(m.grid.grid[tuple(PARAMETERS["initial_location"])][0])
+        == PARAMETERS["agents"]
+    )
 
 
 def test_particle_displacement():

@@ -62,10 +62,17 @@ examples = [
   "jupyter",
 ]
 testing = [
+  "bmi-tester",
+  "nbmake",
   "pytest",
   "pytest-datadir",
   "pytest-cov",
   "coverage",
+]
+format = [
+  "black",
+  "flake8",
+  "isort",
 ]
 
 [build-system]

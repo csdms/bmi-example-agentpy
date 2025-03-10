@@ -70,7 +70,7 @@ def check_notebooks(session: nox.Session) -> None:
     session.run("pytest", *args)
 
 
-@nox.session
+@nox.session(reuse_venv=True)
 def format(session: nox.Session) -> None:
     """Clean lint and assert style."""
     session.install(".[format]")

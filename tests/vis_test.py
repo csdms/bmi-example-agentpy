@@ -4,9 +4,12 @@ import matplotlib.pyplot as plt
 import pytest
 from matplotlib.image import AxesImage
 
+# fmt: off
 from diffusion import DiffusionModel, load_config
 from diffusion.vis import (animation_colorbar_plot, has_colorbar,
                            histogram_colorbar_plot, histogram_plot)
+
+# fmt: on
 
 
 @pytest.fixture

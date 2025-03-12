@@ -1,0 +1,54 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '12 4 3 * *'  # 4:12a on third day of the month
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    if:
+      github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
+
+    runs-on: ${{ matrix.os }}
+
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install nox
+        run: pip install nox
+
+      - name: Test
+        run: |
+          nox -s test
+
+      # - name: Test BMI
+      #   run: |
+      #     nox -s test-bmi
+
+      - name: Run examples
+        run: |
+          nox -s run-examples
+
+      - name: Check Jupyter notebooks
+        if: ${{ matrix.python-version == '3.13' }}
+        run: |
+          nox -s check-notebooks

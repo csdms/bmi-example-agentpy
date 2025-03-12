@@ -31,3 +31,8 @@ def animation_colorbar_plot(model, ax, fig):
         ticks=[0, model.p.agents // 2, model.p.agents],
         format=mticker.FixedFormatter(["few", "some", "many"]),
     )
+
+
+def has_colorbar(fig):
+    label = fig.axes[-1].get_label()
+    return label == "<colorbar>"

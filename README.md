@@ -44,10 +44,10 @@ Try the example notebooks and scripts in the [examples](./examples/) directory.
 
 ## Acknowledgments
 
-The AgentPy package:
-
-> Foramitti, J., (2021). AgentPy: A package for agent-based modeling in Python. *Journal of Open Source Software*, **6(62)**, 3065, https://doi.org/10.21105/joss.03065
-
 This work is supported by the U.S. National Science Foundation under Award No.
 [2148762](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2148762),
 *Collaborative Research: Facility: CSDMS: Engaging a thriving community of practice in Earth-surface dynamics*.
+
+The AgentPy package:
+
+> Foramitti, J., (2021). AgentPy: A package for agent-based modeling in Python. *Journal of Open Source Software*, **6(62)**, 3065, https://doi.org/10.21105/joss.03065

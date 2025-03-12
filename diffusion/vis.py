@@ -1,4 +1,4 @@
-"""Helper functions for working with DiffusionModel."""
+"""Visualize DiffusionModel outputs."""
 
 import agentpy as ap
 import matplotlib.ticker as mticker
@@ -15,11 +15,13 @@ def histogram_plot(model, ax):
 
 
 def histogram_colorbar_plot(model, ax, fig):
+    """Display the histogram of particles with a colorbar."""
     im = histogram_plot(model, ax)
     fig.colorbar(im, ax=ax, label="Particle count", shrink=0.8)
 
 
-def animation_colorbar(model, ax, fig):
+def animation_colorbar_plot(model, ax, fig):
+    """Display the histogram of particles with a colorbar for animation."""
     im = histogram_plot(model, ax)
     fig.colorbar(
         im,

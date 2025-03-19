@@ -52,6 +52,9 @@ def run_examples(session: nox.Session):
     session.install(".[examples]")
     session.cd(f"{ROOT}/examples")
     session.run("python", "run-model.py")
+    session.run("python", "step-model.py")
+    session.run("python", "run-bmi-model.py")
+    session.run("python", "step-bmi-model.py")
 
 
 @nox.session(name="check-notebooks")

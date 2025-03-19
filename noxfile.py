@@ -37,7 +37,7 @@ def test_bmi(session: nox.Session) -> None:
     session.install(".[testing]")
     session.run(
         "bmi-test",
-        f"{PACKAGE}:BmiDiffusion",
+        f"{PACKAGE}:BmiDiffusionModel",
         "--config-file",
         f"{ROOT}/examples/config.yaml",
         "--root-dir",

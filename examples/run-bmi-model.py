@@ -1,4 +1,5 @@
 """Run DiffusionModel with only BMI calls."""
+
 import numpy as np
 
 from diffusion import BmiDiffusionModel

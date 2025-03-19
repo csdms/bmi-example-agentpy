@@ -81,3 +81,8 @@ build-backend = "setuptools.build_meta"
 
 [tool.zest-releaser]
 tag-format = "v{version}"
+
+[tool.coverage.run]
+omit = [
+  "diffusion/bmi.py",
+]

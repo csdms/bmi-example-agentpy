@@ -40,9 +40,9 @@ jobs:
         run: |
           nox -s test
 
-      # - name: Test BMI
-      #   run: |
-      #     nox -s test-bmi
+      - name: Test BMI
+        run: |
+          nox -s test-bmi
 
       - name: Run examples
         run: |

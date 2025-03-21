@@ -12,6 +12,7 @@ PARAMETERS = {
     "n_cols": 6,
     "n_rows": 5,
     "initial_location": [2, 2],
+    "diffusivity": 2,
     "bmi_version": "2.0",
 }
 
@@ -32,6 +33,7 @@ def test_model_has_parameters():
     assert m.p.steps == PARAMETERS["steps"]
     assert m.p.n_cols == PARAMETERS["n_cols"]
     assert m.p.n_rows == PARAMETERS["n_rows"]
+    assert m.p.diffusivity == PARAMETERS["diffusivity"]
 
 
 def test_model_setup():
@@ -53,3 +55,10 @@ def test_particle_displacement():
     final_positions = list(m.grid.positions.values())
     for i in range(len(m.agents)):
         assert math.dist(initial_positions[i], final_positions[i]) <= 1.0
+
+
+def test_zero_diffusivity():
+    PARAMETERS["diffusivity"] = 0
+    m = DiffusionModel(PARAMETERS)
+    m.run(steps=1)
+    assert m.histogram[tuple(PARAMETERS["initial_location"])] == 0

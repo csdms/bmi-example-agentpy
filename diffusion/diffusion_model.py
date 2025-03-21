@@ -12,7 +12,7 @@ directions = [
     (-1, 0),
     (0, -1),
 ]
-weights = np.ones(len(directions), dtype=int)*BASE_WEIGHT
+weights = np.ones(len(directions), dtype=int) * BASE_WEIGHT
 
 
 class Particle(ap.Agent):

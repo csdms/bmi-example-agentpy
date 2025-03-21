@@ -5,4 +5,5 @@ DiffusionModel:
   n_cols: 10
   n_rows: 10
   initial_location: [5, 5]
+  diffusivity: 3
   bmi_version: "2.0"

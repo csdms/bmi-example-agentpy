@@ -3,6 +3,8 @@
 import agentpy as ap
 import numpy as np
 
+BASE_WEIGHT = 10
+
 directions = [
     (0, 0),
     (1, 0),
@@ -10,7 +12,7 @@ directions = [
     (-1, 0),
     (0, -1),
 ]
-weights = np.ones(len(directions), dtype=int)
+weights = np.ones(len(directions), dtype=int)*BASE_WEIGHT
 
 
 class Particle(ap.Agent):
@@ -35,7 +37,7 @@ class DiffusionModel(ap.Model):
         self.histogram = None
 
     def set_diffusivity(self):
-        weights[0] = self.p.diffusivity
+        weights[1:] = self.p.diffusivity
 
     def update(self):
         self.histogram = self.grid.apply(len, field="agents")

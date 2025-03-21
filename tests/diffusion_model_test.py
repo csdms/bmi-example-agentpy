@@ -12,7 +12,7 @@ PARAMETERS = {
     "n_cols": 6,
     "n_rows": 5,
     "initial_location": [2, 2],
-    "diffusivity": 2,
+    "diffusivity": 5,
     "bmi_version": "2.0",
 }
 
@@ -61,4 +61,4 @@ def test_zero_diffusivity():
     PARAMETERS["diffusivity"] = 0
     m = DiffusionModel(PARAMETERS)
     m.run(steps=1)
-    assert m.histogram[tuple(PARAMETERS["initial_location"])] == 0
+    assert m.histogram[tuple(PARAMETERS["initial_location"])] == PARAMETERS["agents"]

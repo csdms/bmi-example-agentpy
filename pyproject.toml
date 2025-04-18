@@ -53,6 +53,7 @@ dependencies = [
 Homepage = "https://csdms.colorado.edu"
 Documentation = "https://github.com/csdms/bmi-example-agentpy/blob/main/README.md"
 Repository = "https://github.com/csdms/bmi-example-agentpy"
+Changelog = "https://github.com/csdms/bmi-example-agentpy/blob/main/CHANGES.md"
 Forum = "https://forum.csdms.io"
 
 [project.optional-dependencies]

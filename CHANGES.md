@@ -2,6 +2,12 @@
 
 A record of changes to *bmi-example-agentpy*.
 
+## 0.1.2 (unreleased)
+
+
+- Nothing changed yet.
+
+
 ## 0.1.1 (2025-04-18)
 
 - Add BMI example notebook (#4)

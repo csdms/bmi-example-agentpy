@@ -15,6 +15,14 @@ This is an example of implementing a BMI for a statistical model of diffusion
 on a uniform rectangular plate.
 The model, [DiffusionModel](./diffusion/diffusion_model.py),
 is written with AgentPy.
+In the model,
+a configurable number of agents are placed at a location on the plate.
+In each time step,
+the agents are randomly moved zero to one grid cell,
+with the probability of moving modified by a pseudo-diffusivity.
+The number of agents is conserved,
+so if one reaches a boundary,
+it is reflected back onto the plate.
 
 This repository is organized with the following directories:
 

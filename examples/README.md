@@ -19,3 +19,4 @@ standalone and through a Basic Model Interface.
 
 * [explore-model.ipynb](./explore-model.ipynb): Explores the parameters and initial conditions of a `DiffusionModel` instance.
 * [run-model.ipynb](./run-model.ipynb): Shows how to run `DiffusionModel` standalone and make a plot of the results.
+* [run-bmi-model.ipynb](./run-bmi-model.ipynb): Explores and runs `DiffusionModel` through its BMI.

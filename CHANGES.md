@@ -2,7 +2,7 @@
 
 A record of changes to *bmi-example-agentpy*.
 
-## 0.1.1 (unreleased)
+## 0.1.1 (2025-04-18)
 
 - Add BMI example notebook (#4)
 - Add a pseudo diffusivity to the model (#3)
